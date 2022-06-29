@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Notes</title>
+    <link rel="shortcut icon" href="images/icons/fav-icon.svg" type="image/x-icon">
+
+    <!-- include tailwindcss -->
+    <link rel="stylesheet" href="./styles/tailwind.css">
+</head>
+
+<body class="w-full h-full overflow-hidden bg-gray-50 p-6 lg:p-0">
+
+    <header id="headwe" class="container mx-auto flex flex-col items-center justify-between gap-y-4">
+
+        <nav class="w-full flex items-center justify-between">
+
+            <h1><img class="w-[170px] min-w-[170px]" src="images/mobile-logo.svg" alt="focus notes svg logo"></h1>
+
+
+            <!-- Desktop Search -->
+            <nav class="w-full max-w-[900px] px-20 my-5 hidden lg:flex">
+                <form action="#" class="w-full ">
+                    <label for="search" class="relative">
+                        <button class="absolute py-5 ml-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 active:text-slate-600"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+                        <input id="search" type="text"
+                            class="w-full bg-gray-100 py-5 px-14 rounded-md placeholder:text-sm placeholder:text-gray-400 outline-none"
+                            placeholder="Search part of note and categories, ...">
+                        <button class="absolute right-0 py-5 mr-5"><img width="20px" src="images/all-notes.png"
+                                alt=""></button>
+                    </label>
+                </form>
+            </nav>
+            <!-- Desktop search -->
+
+            <ul class="flex gap-x-3 lg:gap-x-5">
+                <li>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="w-full my-5 lg:hidden">
+            <form action="#">
+                <label for="search" class="relative">
+                    <button class="absolute py-5 ml-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 active:text-slate-600"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                    <input id="search" type="text"
+                        class="w-full bg-gray-100 py-5 px-14 rounded-md placeholder:text-sm placeholder:text-gray-400 outline-none"
+                        placeholder="Search part of note and categories, ...">
+                    <button class="absolute right-0 py-5 mr-5"><img width="20px" src="images/all-notes.png"
+                            alt=""></button>
+                </label>
+            </form>
+        </nav>
+
+    </header>
+
+    <main id="main" class="container mx-auto h-auto overflow-hidden py-5 max-h-96">
+
+    </main>
+
+
+    <footer id="footer" class="w-full absolute bottom-0 py-5">
+
+        <section class="container mx-auto">
+            <section class="mobile-footer lg:hidden flex flex-col justify-center items-center gap-y-2">
+                <div>
+                    <ul class="flex gap-x-3 text-xs">
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Github</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="text-xs text-gray-400">© All CopyRight reserved by <span
+                            class="font-bold">focusnotes.io</span> -
+                        2022</p>
+                </div>
+            </section>
+            <section class="desktop-footer hidden lg:flex justify-between items-center">
+                <div>
+                    <p class="text-xs text-gray-400">© All CopyRight reserved by <span
+                            class="font-bold">focusnotes.io</span> -
+                        2022</p>
+                </div>
+                <div>
+                    <ul class="flex gap-x-3 text-xs text-slate-400">
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Github</a></li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+    </footer>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
