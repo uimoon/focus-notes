@@ -63,10 +63,24 @@ body {
     width: 0;
   }
   50% {
-    width: 132px;
+    width: 195px;
   }
   80% {
-    width: 132px;
+    width: 195px;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes typing-short {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 130px;
+  }
+  80% {
+    width: 130px;
   }
   100% {
     width: 0;
@@ -78,6 +92,14 @@ body {
   border-right: 3px solid #dbdbdb;
   white-space: nowrap;
   animation: typing 4s 0.5s steps(13, end) forwards infinite;
+}
+
+.typed-out-short {
+  width: 0;
+  overflow: hidden;
+  border-right: 3px solid #dbdbdb;
+  white-space: nowrap;
+  animation: typing-short 4s 0.5s steps(13, end) forwards infinite;
 }
 
 /*# sourceMappingURL=sass.css.map */
