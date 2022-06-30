@@ -8,11 +8,18 @@
     <title>Focus Notes</title>
     <link rel="shortcut icon" href="images/icons/fav-icon.svg" type="image/x-icon">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <!-- include tailwindcss -->
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
     <link rel="stylesheet" href="./styles/tailwind.css">
+    <link rel="stylesheet" href="./styles/sass.css">
 </head>
 
-<body class="w-full h-full overflow-hidden bg-gray-50 p-6 lg:p-0">
+<body class="bg-gray-50 text-slate-900 p-5 transition-all ease-in-out ">
 
     <header id="headwe" class="container mx-auto flex flex-col items-center justify-between gap-y-4">
 
@@ -20,12 +27,11 @@
 
             <h1><img class="w-[170px] min-w-[170px]" src="images/mobile-logo.svg" alt="focus notes svg logo"></h1>
 
-
             <!-- Desktop Search -->
-            <nav class="w-full max-w-[900px] px-20 my-5 hidden lg:flex">
+            <nav class="w-full max-w-[800px] px-20 hidden lg:flex">
                 <form action="#" class="w-full ">
                     <label for="search" class="relative">
-                        <button class="absolute py-5 ml-5">
+                        <button class="absolute py-4 ml-5">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 active:text-slate-600"
                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -33,9 +39,9 @@
                             </svg>
                         </button>
                         <input id="search" type="text"
-                            class="w-full bg-gray-100 py-5 px-14 rounded-md placeholder:text-sm placeholder:text-gray-400 outline-none"
+                            class="w-full bg-gray-100 py-4 px-14 rounded-md placeholder:text-sm placeholder:text-gray-400 outline-none"
                             placeholder="Search part of note and categories, ...">
-                        <button class="absolute right-0 py-5 mr-5"><img width="20px" src="images/all-notes.png"
+                        <button class="absolute right-0 py-4 mr-5"><img width="20px" src="images/all-notes.png"
                                 alt=""></button>
                     </label>
                 </form>
@@ -73,7 +79,7 @@
             </ul>
         </nav>
 
-        <nav class="w-full my-5 lg:hidden">
+        <nav class="w-full lg:hidden">
             <form action="#">
                 <label for="search" class="relative">
                     <button class="absolute py-5 ml-5">
@@ -86,37 +92,88 @@
                     <input id="search" type="text"
                         class="w-full bg-gray-100 py-5 px-14 rounded-md placeholder:text-sm placeholder:text-gray-400 outline-none"
                         placeholder="Search part of note and categories, ...">
-                    <button class="absolute right-0 py-5 mr-5"><img width="20px" src="images/all-notes.png"
-                            alt=""></button>
+                    <button class="absolute right-0 py-5 mr-5"><img width="20px" src="images/all-notes.png" alt="all notes"></button>
                 </label>
             </form>
         </nav>
 
     </header>
 
-    <main id="main" class="container mx-auto h-auto overflow-hidden py-5 max-h-96">
+    <main id="main" class="container mx-auto">
+        <section id="hero"
+            class="w-full flex flex-col justify-center items-center md:justify-start md:items-start relative pt-3 sm:pt-8">
+
+            <!-- <div class="w-full h-96 grid grid-cols-6 absolute top-0 gap-3">
+                <div class="col-span-6 sm:col-span-3 md:col-span-2 lg:col-span-2 xl:col-span-1 rounded-lg p-5 bg-gradient-to-b from-slate-200"></div>
+            </div> -->
+
+            <!-- Mobile Bullseye -->
+            <img width="260px" class="animate__animated animate__zoomIn absolute left-[-100px] top-0 -z-10 md:hidden"
+                src="images/bullseye.png" alt="bullseye">
+
+            <section
+                class="z-50 texts w-full flex flex-col items-center gap-y-2 text-lg animate__animated animate__zoomIn">
+
+                <!-- Desktop Bullseye -->
+                <img class="animate__animated animate__zoomIn w-[200px] z-10 hidden md:flex lg:w-[200px] mt-1"
+                    src="images/bullseye.png" alt="bullseye">
+
+                <h1 id="keep"
+                    class="animate__animated animate__zoomIn text-stroke-white mt-1 sm:mt-1 text-[5.7rem] md:text-6xl lg:text-7xl 2xl:text-[5.3rem] text-center font-semibold tracking-tight md:tracking-normal leading-none sm:leading-tight">
+                    Keep your ideas safe.</h1>
+
+                <!-- on Mobile -->
+                <div class="flex flex-col gap-y-2 items-center justify-center sm:hidden text-xl">
+                    <p>You can writen <span class="italic">notes</span> in</p>
+                    <div class="flex gap-x-3 m-0 p-0 "><img class="animate__animated animate__zoomIn max-w-[100px]"
+                            src="images/colors.svg" alt=""> Style</div>
+                    <p>and 8 <span class="font-bold">Categories</span></p>
+                    <button class="font-extrabold italic text-blue-500 text-xl typed-out">Write a note</button>
+                    <a href="#" class="text-slate-400 text-xs mt-4">Subscibe by $1 for years</a>
+                </div>
+
+
+                <!-- on Desktop -->
+                <div class="hidden sm:flex sm:flex-col items-center gap-y-1 md:gap-y-3 md:mt-5 lg:mt-10 text-3xl">
+                    <p class="flex gap-x-3">You can write <span class="italic">notes</span> in <img
+                            src="images/colors.svg"
+                            class="transition-all ease-in-out duration-500 max-w-[110px] animate__animated animate__zoomIn"
+                            alt="notes-colors"> Style</p>
+                    <p class="pt-2">and 8 <span class="font-bold mr-2">Catergories.</span>
+                        <button
+                            class="font-extrabold italic hover:not-italic hover:text-slate-700 text-blue-500 text-xl typed-out">
+                            Write a note
+                        </button>
+                    </p>
+                    <p><a href="#" class="text-slate-400 text-xs">Subscibe by $1 for years</a></p>
+                </div>
+            </section>
+
+        </section>
 
     </main>
 
 
-    <footer id="footer" class="w-full absolute bottom-0 py-5">
+    <footer id="footer" class="container mx-auto flex flex-col justify-end ">
 
-        <section class="container mx-auto">
-            <section class="mobile-footer lg:hidden flex flex-col justify-center items-center gap-y-2">
+        <section class="w-full flex justify-center items-center">
+
+            <section class="mobile-footer w-full lg:hidden flex flex-col justify-center items-center gap-y-2">
                 <div>
-                    <ul class="flex gap-x-3 text-xs">
+                    <ul class="flex gap-x-3 text-xs text-gray-400">
                         <li><a href="#">Contact us</a></li>
                         <li><a href="#">About us</a></li>
                         <li><a href="#">Github</a></li>
                     </ul>
                 </div>
                 <div>
-                    <p class="text-xs text-gray-400">© All CopyRight reserved by <span
+                    <p class="text-xs text-gray-400 text-center">© All CopyRight reserved by <span
                             class="font-bold">focusnotes.io</span> -
                         2022</p>
                 </div>
             </section>
-            <section class="desktop-footer hidden lg:flex justify-between items-center">
+
+            <section class="desktop-footer w-full hidden lg:flex justify-between items-center">
                 <div>
                     <p class="text-xs text-gray-400">© All CopyRight reserved by <span
                             class="font-bold">focusnotes.io</span> -
@@ -130,12 +187,13 @@
                     </ul>
                 </div>
             </section>
+
         </section>
 
     </footer>
 
 
-    <script src="app.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 
 </html>

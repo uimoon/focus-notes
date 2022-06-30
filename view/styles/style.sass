@@ -1,0 +1,69 @@
+// mixin for max-width media query
+@mixin max($width)
+    @media screen and(max-width: $width)
+        @content
+
+// mixin for min-width media query
+@mixin min($width)
+    @media screen and(min-width: $width)
+        @content
+
+body
+    width: 100%
+    height: 100vh
+    display: grid
+    grid-template-rows: 110px 1fr 50px
+    font-family: 'Poppins', sans-serif
+    @include min(1024px)
+        grid-template-rows: 70px 1fr 50px
+
+#hero
+    background: url('../images/border-dashed-cols/xs.svg') no-repeat top
+    background-size: 100%
+    margin-top: 18px
+    @include min(640px)
+        background: url('../images/border-dashed-cols/sm.svg') no-repeat top
+        background-size: 100%
+    @include min(768px)
+        background: url('../images/border-dashed-cols/md.svg') no-repeat top
+        background-size: 100%
+    @include min(1024px)
+        background: url('../images/border-dashed-cols/lg.svg') no-repeat top
+        background-size: 100%
+    @include min(1280px)
+        background: url('../images/border-dashed-cols/xl.svg') no-repeat top
+        background-size: 100%
+    @include min(1280px)
+        background: url('../images/border-dashed-cols/2xl.svg') no-repeat top
+        background-size: 100%
+    // @include min(515px)
+    //     padding-top: 20px
+
+#keep
+    @include min(515px)
+        padding-top: 80px
+    @include min(768px)
+        padding-top: 0px
+
+.text-stroke-white
+    @include max(768px)
+        // -webkit-text-stroke: 2px white
+        // text-stroke: 3px white
+
+@keyframes typing
+    0%
+        width: 0
+    50%
+        width: 132px
+    80%
+        width: 132px
+    100%
+        width: 0
+
+
+.typed-out
+    width: 0
+    overflow: hidden
+    border-right: 3px solid #dbdbdb
+    white-space: nowrap
+    animation: typing 4s .5s steps(13, end) forwards infinite
