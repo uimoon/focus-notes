@@ -7,13 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "npm install tailwindcss",
     "config": "npx tailwind init",
-    "tw": "npx tailwind -i ./view/styles/style.css -o ./view/styles/tailwind.css --watch --minify"
+    "tw": "npx tailwind -i ./view/styles/style.css -o ./view/styles/tailwind.css --watch --minify",
+    "sass": "sass --watch ./view/styles/style.sass ./view/styles/sass.css",
+    "live": "live-server view"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "animate.css": "^4.1.1",
-    "tailwindcss": "^3.0.24"
+    "animejs": "^3.2.1",
+    "tailwindcss": "^3.1.4"
   }
 }

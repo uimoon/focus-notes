@@ -1,14 +1,35 @@
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6d6d6d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-rows: 110px 1fr 50px;
+  grid-template-rows: 110px auto 50px;
   font-family: "Poppins", sans-serif;
 }
 @media screen and (min-width: 1024px) {
   body {
-    grid-template-rows: 70px 1fr 50px;
+    grid-template-rows: 70px auto 50px;
   }
+}
+
+textarea {
+  resize: none;
 }
 
 #hero {
@@ -86,6 +107,19 @@ body {
     width: 0;
   }
 }
+@keyframes show-notes {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 690px;
+  }
+}
+.show-notes {
+  height: 0;
+  animation: show-notes 0.7s steps(22, end) forwards;
+}
+
 .typed-out {
   width: 0;
   overflow: hidden;
