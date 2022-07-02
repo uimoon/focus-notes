@@ -1,1 +1,0 @@
-document.getElementById('forest-ext-shadow-host').classList.add('hidden')
